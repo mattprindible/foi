@@ -1,1 +1,1 @@
-# foi
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c65372f-7601-4d27-9ba8-f67acb87ce89/deploy-status)](https://app.netlify.com/sites/infallible-ptolemy-37166c/deploys)
