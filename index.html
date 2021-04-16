@@ -5,15 +5,16 @@
     <title>Matt Prindible</title>
     <link rel="stylesheet" href="https://use.typekit.net/uid6ryj.css">
     <style>
-        h1{
+        p{
             font-family: forma-djr-display, sans-serif;
             font-weight: 500;
             font-style: italic;
-            font-size: 4rem;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
-    <h1>Test</h1>
+    {% for foi in all %}
+        <p>{{ foi }}</p>
 </body>
 </html>
