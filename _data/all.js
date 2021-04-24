@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Airtable = require('airtable');
 
-let base = new Airtable({ apiKey: 'keygfaRWSJgUgmcUz' }).base('appi9lQAVFMGTbT8J');
+let base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appi9lQAVFMGTbT8J');
 
 module.exports = () => {
     return new Promise((resolve, reject) => {
