@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Failure of Imagination...</title>
-    <link rel="stylesheet" href="https://use.typekit.net/uid6ryj.css">
     <style>
+        @font-face {
+            font-family: 'Mondwest-Regular';
+            src: url('/fonts/Mondwest-Regular.woff2') format('woff2');
+        }
         body{
             background-color: #f7fafc;
         }
         p{
-            font-family: forma-djr-display, sans-serif;
-            font-weight: 500;
-            font-style: italic;
+            font-family: 'Mondwest-Regular', sans-serif;
             font-size: 4rem;
             background-color: #1FFFD4;
             color: #f7fafc;
+        }
+        .marquee {
+            margin: 0 auto;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            width: max-content;
+
+            will-change: transform;
+            animation: marquee 30s linear infinite alternate;
+            }
+        .marquee span:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
         }
     </style>
 </head>
 <body>
     {% for foi in all %}
-        <p>{{ foi.Snippet }}</p>
+        <p class = 'marquee'>
+            <span>{{ foi.Snippet }}</span>
+        </p>
     {% endfor %}
 </body>
 </html>
